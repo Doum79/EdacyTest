@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "./assets/lib/@fortawesome/fontawesome-free/css/all.min.css";
+@import "./assets/lib/ionicons/css/ionicons.min.css";
+@import "./assets/lib/rickshaw/rickshaw.min.css";
+@import "./assets/lib/select2/css/select2.min.css";
+@import "./assets/css/bracket.css"
