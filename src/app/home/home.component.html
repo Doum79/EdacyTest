@@ -1,16 +1,14 @@
 
-<!-- ########## START: RIGHT PANEL ########## -->
+
 <app-navbar></app-navbar>
 
 
 <div class="br-mainpanel">
   <div class="br-pageheader">
     <nav class="breadcrumb pd-0 mg-0 tx-12">
-      <a class="breadcrumb-item" href="index.html">Bracket</a>
-      <a class="breadcrumb-item" href="#">Forms</a>
-      <span class="breadcrumb-item active">Form Layouts</span>
+     
     </nav>
-  </div><!-- br-pageheader -->
+  </div>
   <div class="br-pagetitle">
 <div class="br-pagebody">
   <div class="br-section-wrapper">
@@ -25,159 +23,153 @@
        
         <div class="col-lg-12">
           <div class="form-group mg-b-10-force">
-            <label class="form-control-label">Program Title <span class="tx-danger">*</span></label>
-            <input class="form-control" type="text" name="address" value="Market St. San Francisco" placeholder="Enter address">
+            <label class="form-control-label">Program Title</label>
+            <input class="form-control" type="text" name="title" placeholder="Front-end development 101">
           </div>
-        </div><!-- col-8 -->
+        </div>
         <div class="col-lg-12">
           <div class="form-group mg-b-10-force">
-            <label class="form-control-label">Program Language <span class="tx-danger">*</span></label>
-            <select class="form-control select2" data-placeholder="English">
-              <option label="Choose one"></option>
-              <option value="Firefox">Firefox</option>
-              <option value="Chrome">Chrome</option>
-              <option value="Safari">Safari</option>
-              <option value="Opera">Opera</option>
-              <option value="Internet Explorer">Internet Explorer</option>
+            <label class="form-control-label">Program Language </label>
+            <select class="form-control select2" 
+            name="LanguageList">
+              <option  
+              *ngFor="let Lang of LanguageList" 
+              [value]="Lang">
+              {{Lang.label}}
+              </option>
+
+              
             </select>
           </div>
-        </div><!-- col-4 -->
-        <label class="form-control-label">Program Level <span class="tx-danger">*</span></label>
+        </div>
+        <label class="form-control-label">Program Level</label>
         <div class="col-lg-3">
           <label class="rdiobox">
             <input name="rdio" type="radio" >
             <span>Beginner</span>
           </label>
-        </div><!-- col-3 -->
+        </div>
         <div class="col-lg-3 mg-t-20 mg-lg-t-0">
           <label class="rdiobox">
             <input name="rdio" type="radio" >
             <span>Itermediate</span>
           </label>
-        </div><!-- col-3 -->
+        </div>
         <div class="col-lg-3 mg-t-20 mg-lg-t-0">
           <label class="rdiobox">
             <input name="rdio" type="radio">
             <span>Advanced</span>
           </label>
-        </div><!-- col-3 -->
+        </div>
 
-        <label class="form-control-label">Program Type <span class="tx-danger">*</span></label>
+        <label class="form-control-label">Program Type </label>
         <div class="col-lg-3">
           <label class="rdiobox">
             <input name="rdio" type="radio">
             <span>Foundation</span>
           </label>
-        </div><!-- col-3 -->
+        </div>
         <div class="col-lg-3 mg-t-20 mg-lg-t-0">
           <label class="rdiobox">
             <input name="rdio" type="radio" >
             <span>Specialization</span>
           </label>
-        </div><!-- col-3 -->
+        </div>
         
-      </div><!-- row -->
+      </div>
 
     <h6 class="br-section-label">Details</h6>
     <p class="br-section-text">Program Description</p>
     <div class="row mg-t-20">
       <div class="col-lg-12">
-        <textarea rows="3" class="form-control" placeholder="Textarea"></textarea>
-      </div><!-- col -->
-    </div><!-- row -->
+        <textarea rows="3" class="form-control" placeholder="Type your description here..."></textarea>
+      </div>
+    </div>
     <p class="br-section-text">Learning Objectives</p>
     <div class="row mg-t-20">
       <div class="col-lg-12">
-        <textarea rows="3" class="form-control" placeholder="Textarea"></textarea>
-      </div><!-- col -->
-    </div><br/><!-- row -->
+        <textarea rows="3" class="form-control" placeholder="Type what student will learn here..."></textarea>
+      </div>
+    </div><br/>
 
     <div class="row mg-b-25">
       <div class="col-lg-6">
         <div class="form-group">
-          <label class="form-control-label">Duration (weeks) <span class="tx-danger"></span></label>
-          <input class="form-control" type="number" name="firstname" value="John Paul" placeholder="1">
+          <label class="form-control-label">Duration (weeks) </label>
+          <input class="form-control" type="number" name="duration">
         </div>
-      </div><!-- col-4 -->
+      </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <label class="form-control-label">Hours per week <span class="tx-danger"></span></label>
-          <input class="form-control" type="number" name="lastname" value="McDoe" placeholder="8">
+          <label class="form-control-label">Hours per week </label>
+          <input class="form-control" type="number" name="hour">
         </div>
-      </div><!-- col-4 -->
+      </div>
     </div>
 
     <div class="row mg-b-25">
       <div class="col-lg-12">
         <div class="form-group">
-          <label class="form-control-label">Prerequisite <span class="tx-danger">*</span></label>
-          <input class="form-control" type="number" name="firstname" value="John Paul" placeholder="Ex: Certificate of AnguarJS">
+          <label class="form-control-label">Prerequisite </label>
+          <input class="form-control" type="text" name="prerequisite"  placeholder="Ex: Knowledge of AngularJS">
         </div>
-      </div><!-- col-4 -->
+      </div>
     </div>
 
      <div class="row mg-b-25">
       <div class="col-lg-6">
         <div class="form-group">
-          <label class="form-control-label">Type of Certification <span class="tx-danger">*</span></label>
-          <input class="form-control" type="number" name="firstname" value="John Paul" placeholder="Enter firstname">
+          <label class="form-control-label">Type of Certification</label>
+          <input class="form-control" type="text" name="typecertification"  placeholder="Certificate of Completion">
         </div>
-      </div><!-- col-4 -->
+      </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <label class="form-control-label">Start Date <span class="tx-danger">*</span></label>
-          <input class="form-control" type="date" name="lastname" value="McDoe" placeholder="Enter lastname">
+          <label class="form-control-label">Start Date </label>
+          <input class="form-control" type="date" name="date">
         </div>
-      </div><!-- col-4 -->
+      </div>
       
     </div>
 
 
     <h6 class="br-section-label">Details</h6>
-    <p class="br-section-text">Program Description</p>
-    <div class="row mg-t-20">
-      <div class="col-xl-6">
-        <div class="alert alert-warning alert-solid pd-20" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <div class="d-sm-flex align-items-center justify-content-start">
-            <i class="icon ion-ios-cloud-upload-outline lh-0 tx-52"></i>
-            <div class="mg-sm-l-15 mg-t-15 mg-sm-t-0">
-              <h5 class="mg-b-2 pd-t-2">Upload completed</h5>
-              <p class="mg-b-0 tx-xs op-8"><strong class="tx-medium">Image1.png</strong>  in Documents/Images/</p>
-            </div>
-          </div><!-- d-flex -->
-        </div><!-- alert -->
-      </div><!-- col-xl-6 -->
-      <div class="col-xl-6">
-        <div class="alert alert-warning alert-solid pd-20" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <div class="d-sm-flex align-items-center justify-content-start">
-            <i class="icon ion-ios-cloud-upload-outline lh-0 tx-52"></i>
-            <div class="mg-sm-l-15 mg-t-15 mg-sm-t-0">
-              <h5 class="mg-b-2 pd-t-2">Upload completed</h5>
-              <p class="mg-b-0 tx-xs op-8"><strong class="tx-medium">Image1.png</strong>  in Documents/Images/</p>
-            </div>
-          </div><!-- d-flex -->
-        </div><!-- alert -->
-      </div><!-- col-xl-6 -->
-    </div><br/><!-- row -->
-
+    <p class="br-section-text">Program Cover Image (optional)</p>
+    <div class="row mg-b-25">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <div class="card card-body" >
+          <label class="form-control-label" id="labelforme">
+            <span></span><i class="icon ion-upload" >
+            </i><h6 class="text">Format: jpg, png, ico<br/>Max size: 100KB</h6><span></span>
+            <input class="form-control" id="file1" type="file" name="filename" 
+           >
+           </label>
+      </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <div class="card card-body" id="labelforme">
+          <label class="form-control-label">
+            <span></span><i class="icon ion-upload" ></i><h6 class="text">Format:mp4, mov<br/>Max size: 500KB</h6><span></span>
+          <input class="form-control" id="file1" type="file" name="videoname"  >
+        </label>
+      </div>
+        </div>
+      </div>
     <div class="row">
 
       <div class="col-sm-6 col-md-12 mg-t-20 mg-sm-t-0">
         <div class="btn-demo">
-          
-          <button class="btn btn-outline-secondary active btn-block mg-b-10">CREATE PROGRAM</button>
-         
-        </div><!-- btn-demo -->
-      </div><!-- col-sm-3 -->
+          <button class="btn btn-teal disabled btn-block mg-b-10">
+            CREATE PROGRAM
+          </button>
+        </div>
+      </div>
     </div>
 
-  </div><!-- br-section-wrapper -->
-</div><!-- br-pagebody -->
+  </div>
+</div>
 </div>
 
